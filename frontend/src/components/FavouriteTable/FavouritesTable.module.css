@@ -1,0 +1,76 @@
+.favouritesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.favouritesTable th,
+.favouritesTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.favouritesTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.favouritesTable a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.favouritesTable a:hover {
+    text-decoration: underline;
+}
+
+.favouritesTable button {
+    padding: 6px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.favouritesTable button:hover {
+    background-color: #c82333;
+}
+
+@media screen and (max-width: 768px) {
+    .favouritesTable th {
+        display: none;
+    }
+
+    .favouritesTable td {
+        display: block;
+        padding: 10px 5px;
+        text-align: right;
+        position: relative;
+        border: none;
+    }
+
+    .favouritesTable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        padding-left: 10px;
+        width: 50%;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .favouritesTable button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

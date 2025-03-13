@@ -1,0 +1,90 @@
+.universityTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.universityTable th,
+.universityTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.universityTable th {
+    background-color: #f4f4f4;
+}
+
+.universityTable a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.favouriteButton {
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.addFavourite {
+    background-color: #4caf50;
+    color: white;
+}
+
+.addFavourite:hover {
+    background-color: #45a049;
+}
+
+.removeFavourite {
+    background-color: #f44336;
+    color: white;
+}
+
+.removeFavourite:hover {
+    background-color: #d32f2f;
+}
+
+@media screen and (max-width: 768px) {
+    .universityTable {
+        font-size: 14px;
+    }
+
+    .universityTable th {
+        display: none;
+    }
+
+    .universityTable td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        border: none;
+        position: relative;
+    }
+
+    .universityTable td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #333;
+    }
+
+    .favouriteButton {
+        height: 30px;
+        width: 100%;
+
+    }
+
+}
